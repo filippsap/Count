@@ -1,0 +1,38 @@
+﻿@page "/"
+
+
+<div class="row">
+    <h3>@count</h3>
+    <div class="col">
+        <button @onclick=(Increment)>Увеличить на 1</button>
+        <button @onclick=(Dicrement)>Уменьшает на 1</button>
+        <button @onclick=(Multiplae)>Умножить на 2</button>
+        <button @onclick=(MultiplaeOn13)>Умножить на 13</button>
+    </div>
+</div>
+
+
+@code {
+    public long count = 0;
+
+    public void Increment()
+    {
+        count++;
+    }
+
+    public void Dicrement()
+    {
+        count--;
+    }
+
+    public void Multiplae()
+    {
+        count = count * 2;
+    }
+
+    public void MultiplaeOn13()
+    {
+        count = count * 13;
+    }
+
+}
